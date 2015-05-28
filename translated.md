@@ -12,9 +12,9 @@ Briefly, a code review is a discussion between two or more developers about chan
 
 ## Architecture / Design
 
-* Single Responsibility Principle: The idea that a class should have one-and-only-one responsibility. Harder than one might expect. I usually apply this to methods too. If we have to use “and” to finish describing what a method is capable of doing, it might be at the wrong level of abstraction.
+* 単一責任の原則: The idea that a class should have one-and-only-one responsibility. Harder than one might expect. I usually apply this to methods too. If we have to use “and” to finish describing what a method is capable of doing, it might be at the wrong level of abstraction.
 
-* Open/Closed Principle: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?
+* 開放/閉鎖の原則: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?
 
 * Code duplication: I go by the “three strikes” rule. If code is copied once, it’s usually okay although I don’t like it. If it’s copied again, it should be refactored so that the common functionality is split out.
 
