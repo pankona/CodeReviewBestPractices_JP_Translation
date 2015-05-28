@@ -23,8 +23,8 @@
 <h2>Architecture / Design</h2>
 
 <ul>
-<li><p>Single Responsibility Principle: The idea that a class should have one-and-only-one responsibility. Harder than one might expect. I usually apply this to methods too. If we have to use “and” to finish describing what a method is capable of doing, it might be at the wrong level of abstraction.</p></li>
-<li><p>Open/Closed Principle: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?</p></li>
+<li><p>単一責任の原則: The idea that a class should have one-and-only-one responsibility. Harder than one might expect. I usually apply this to methods too. If we have to use “and” to finish describing what a method is capable of doing, it might be at the wrong level of abstraction.</p></li>
+<li><p>開放/閉鎖の原則: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?</p></li>
 <li><p>Code duplication: I go by the “three strikes” rule. If code is copied once, it’s usually okay although I don’t like it. If it’s copied again, it should be refactored so that the common functionality is split out.</p></li>
 <li><p>Squint-test offenses: If I squint my eyes, does the shape of this code look identical to other shapes? Are there patterns that might indicate other problems in the code’s structure?</p></li>
 <li><p>Code left in a better state than found: If I’m changing an area of the code that’s messy, it’s tempting to add in a few lines and leave. I recommend going one step further and leaving the code nicer than it was found.</p></li>
