@@ -10,7 +10,7 @@ Briefly, a code review is a discussion between two or more developers about chan
 
 # What I look for during a review
 
-## Architecture / Design
+## アーキテクチャ / 設計 
 
 * 単一責任の原則: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。クラスやメソッドの説明を記載するにあたって、"and" を使わなければ説明できないときようなときは、その設計はもしかしたら適切な抽象度になっていないかもしれないと疑う。
 割と単純な原則かと思うかもしれないが、確実に守っていくのは言うほど簡単ではない。
