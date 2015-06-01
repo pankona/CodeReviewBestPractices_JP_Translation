@@ -33,7 +33,7 @@ What happens if we need to add another one of x?
 * エラー処理: エラー処理はエレガントに、かつ過不足なくやれているか？
 カスタマイズしたエラークラスを用いているならば、それらは本当に役に立ってるか？
 
-* Efficiency: If there’s an algorithm in the code, is it using an efficient implementation? For example, iterating over a list of keys in a dictionary is an inefficient way to locate a desired value.
+* 効率的な設計か: アルゴリズム、データ構造は効果的な実装を選択しているか？たとえば、配列を使うべきかハッシュテーブルを使うべきか、等。
 
 ## Style
 
