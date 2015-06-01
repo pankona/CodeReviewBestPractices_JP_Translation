@@ -28,7 +28,7 @@ What happens if we need to add another one of x?
 * 来たときよりキレイに: 変更対象のコードがあれだったとき、その辺りに触れたくない気持ちもわからないではないが、
 ほっといたら一生あれなままなので、ほんのちょっとずつでもマトモなコードになるようにキレイにしていくのがオススメ。
 
-* Potential bugs: Are there off-by-one errors? Will the loops terminate in the way we expect? Will they terminate at all?
+* 潜在的なバグがないか: 境界値周りはちゃんと処理できているか？ループが期待通り終わるようになっていて無限ループしたりしないか？ 終わるときちゃんとキレイに終わるか？
 
 * Error handling: Are errors handled gracefully and explicitly where necessary? Have custom errors been added? If so, are they useful?
 
