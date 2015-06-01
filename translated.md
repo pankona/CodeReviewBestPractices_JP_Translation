@@ -25,7 +25,8 @@ What happens if we need to add another one of x?
 * 薄目で見てみる: ぼんやりとコードの「形」を見てみる。他のコードと似通ってはいないだろうか？
 他のコードと似たような「形」がたびたび登場するならば、無駄のある設計をしている可能性があるかもしれない。
 
-* Code left in a better state than found: If I’m changing an area of the code that’s messy, it’s tempting to add in a few lines and leave. I recommend going one step further and leaving the code nicer than it was found.
+* 来たときよりキレイに: 変更対象のコードがあれだったとき、その辺りに触れたくない気持ちもわからないではないが、
+ほっといたら一生あれなままなので、ほんのちょっとずつでもマトモなコードになるようにキレイにしていくのがオススメ。
 
 * Potential bugs: Are there off-by-one errors? Will the loops terminate in the way we expect? Will they terminate at all?
 
