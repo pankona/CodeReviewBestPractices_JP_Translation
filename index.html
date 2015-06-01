@@ -18,19 +18,28 @@
 
 <p>Briefly, a code review is a discussion between two or more developers about changes to the code to address an issue. Many articles talk about the benefits of code reviews, including knowledge sharing, code quality, and developer growth. I’ve found fewer that talk about what to look for in a review and how to discuss code under review.</p>
 
-<h1>What I look for during a review</h1>
+<h1>コードレビューの観点</h1>
 
-<h2>Architecture / Design</h2>
+<h2>アーキテクチャ / 設計編</h2>
 
 <ul>
-<li><p>単一責任の原則: The idea that a class should have one-and-only-one responsibility. Harder than one might expect. I usually apply this to methods too. If we have to use “and” to finish describing what a method is capable of doing, it might be at the wrong level of abstraction.</p></li>
-<li><p>開放/閉鎖の原則: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?</p></li>
-<li><p>Code duplication: I go by the “three strikes” rule. If code is copied once, it’s usually okay although I don’t like it. If it’s copied again, it should be refactored so that the common functionality is split out.</p></li>
-<li><p>Squint-test offenses: If I squint my eyes, does the shape of this code look identical to other shapes? Are there patterns that might indicate other problems in the code’s structure?</p></li>
-<li><p>Code left in a better state than found: If I’m changing an area of the code that’s messy, it’s tempting to add in a few lines and leave. I recommend going one step further and leaving the code nicer than it was found.</p></li>
-<li><p>Potential bugs: Are there off-by-one errors? Will the loops terminate in the way we expect? Will they terminate at all?</p></li>
-<li><p>Error handling: Are errors handled gracefully and explicitly where necessary? Have custom errors been added? If so, are they useful?</p></li>
-<li><p>Efficiency: If there’s an algorithm in the code, is it using an efficient implementation? For example, iterating over a list of keys in a dictionary is an inefficient way to locate a desired value.</p></li>
+<li><p>単一責任の原則: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。<br>
+たとえば、クラスやメソッドの説明を記載するにあたって、&quot;and&quot; を使わなければ説明できないときようなときは、その設計はもしかしたら適切な抽象度になっていないかもしれない。<br>
+割と単純な原則かと思うかもしれないが、確実に守っていくのはなかなか難しい。</p></li>
+<li><p>開放/閉鎖の原則: オブジェクト指向言語を用いているのであれば、設計が拡張に対して開いており、変更に対して閉じているかを考える。<br>
+実際に機能が追加・変更されるときのことを想像して考えてみる。</p></li>
+<li><p>重複コード: 個人的に&quot;スリーストライクアウト&quot;ルールと呼んでいる。<br>
+コードが一回コピーされるならまあ甘んじて許そう。だが二回目のコピーが行われたのなら、そのときは要リファクタリングである。<br>
+上記の例では合わせて三つの重複コードがあるのでスリーストライクでアウトである。重複部分は別途メソッドに切り出すなりしてコードの重複を防ごう。</p></li>
+<li><p>薄目で見てみる: ぼんやりとコードの「形」を見てみる。他のコードと似通ってはいないだろうか？<br>
+他のコードと似たような「形」がたびたび登場するならば、無駄のある設計をしている可能性があるかもしれない。</p></li>
+<li><p>来たときよりキレイに: 変更対象のコードを目の当たりにして「うわぁなんだこれ」だったとき、その辺りに触れたくない気持ちもわからないではないが、<br>
+良くないコードはほっといたら一生良くないコードのなままなので、ほんのちょっとずつでもマトモなコードになるようにキレイにしていくのがオススメ。<br>
+（ボーイスカウトルールとも呼ばれたりする。）</p></li>
+<li><p>潜在的なバグの有無: 境界値周りはちゃんと処理できているか？ループが期待通り終わるようになっていて無限ループしたりしないか？ 終わるときちゃんとキレイに終わるか？</p></li>
+<li><p>エラー処理の妥当性: エラー処理はエレガントに、かつ過不足なくやれているか？<br>
+カスタマイズしたエラークラスを用いているならば、それらは本当に役に立ってるか？</p></li>
+<li><p>効率的な設計か: アルゴリズム、データ構造は効果的な実装を選択しているか？たとえば、配列を使うべきかハッシュテーブルを使うべきか、等。</p></li>
 </ul>
 
 <h2>Style</h2>
