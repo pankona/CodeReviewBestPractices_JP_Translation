@@ -12,7 +12,8 @@ Briefly, a code review is a discussion between two or more developers about chan
 
 ## Architecture / Design
 
-* 単一責任の原則: The idea that a class should have one-and-only-one responsibility. Harder than one might expect. I usually apply this to methods too. If we have to use “and” to finish describing what a method is capable of doing, it might be at the wrong level of abstraction.
+* 単一責任の原則: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。クラスやメソッドの説明を記載するにあたって、"and" を使わなければ説明できないときようなときは、その設計はもしかしたら適切な抽象度になっていないかもしれないと疑う。
+割と単純な原則かと思うかもしれないが、確実に守っていくのは言うほど簡単ではない。
 
 * 開放/閉鎖の原則: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?
 
