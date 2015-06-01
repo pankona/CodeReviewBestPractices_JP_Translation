@@ -15,9 +15,12 @@ Briefly, a code review is a discussion between two or more developers about chan
 * 単一責任の原則: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。クラスやメソッドの説明を記載するにあたって、"and" を使わなければ説明できないときようなときは、その設計はもしかしたら適切な抽象度になっていないかもしれないと疑う。
 割と単純な原則かと思うかもしれないが、確実に守っていくのは言うほど簡単ではない。
 
-* 開放/閉鎖の原則: If the language is object-oriented, are the objects open for extension but closed for modification? What happens if we need to add another one of x?
+* 開放/閉鎖の原則: オブジェクト指向言語を用いているのであれば、設計が拡張に対して開いており、変更に対して閉じているかを問う。
+What happens if we need to add another one of x?
 
-* Code duplication: I go by the “three strikes” rule. If code is copied once, it’s usually okay although I don’t like it. If it’s copied again, it should be refactored so that the common functionality is split out.
+* 重複コード: 個人的に"スリーストライクアウト"ルールと呼んでいる。
+コードが一回コピーされるならまあ甘んじて許そう。だが二回目のコピーが行われたのなら、そのときは要リファクタリングである。
+三つの重複コードがあるのでスリーストライクアウトである。コピーされる部分は関数に切り出してコードの重複を防ぐのが良い。
 
 * Squint-test offenses: If I squint my eyes, does the shape of this code look identical to other shapes? Are there patterns that might indicate other problems in the code’s structure?
 
