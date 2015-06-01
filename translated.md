@@ -30,7 +30,8 @@ What happens if we need to add another one of x?
 
 * 潜在的なバグがないか: 境界値周りはちゃんと処理できているか？ループが期待通り終わるようになっていて無限ループしたりしないか？ 終わるときちゃんとキレイに終わるか？
 
-* Error handling: Are errors handled gracefully and explicitly where necessary? Have custom errors been added? If so, are they useful?
+* エラー処理: エラー処理はエレガントに、かつ過不足なくやれているか？
+カスタマイズしたエラークラスを用いているならば、それらは本当に役に立ってるか？
 
 * Efficiency: If there’s an algorithm in the code, is it using an efficient implementation? For example, iterating over a list of keys in a dictionary is an inefficient way to locate a desired value.
 
