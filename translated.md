@@ -22,7 +22,8 @@ What happens if we need to add another one of x?
 コードが一回コピーされるならまあ甘んじて許そう。だが二回目のコピーが行われたのなら、そのときは要リファクタリングである。
 三つの重複コードがあるのでスリーストライクアウトである。コピーされる部分は関数に切り出してコードの重複を防ぐのが良い。
 
-* Squint-test offenses: If I squint my eyes, does the shape of this code look identical to other shapes? Are there patterns that might indicate other problems in the code’s structure?
+* 薄目で見てみる: ぼんやりとコードの「形」を見てみる。他のコードと似通ってはいないだろうか？
+他のコードと似たような「形」がたびたび登場するならば、無駄のある設計をしている可能性があるかもしれない。
 
 * Code left in a better state than found: If I’m changing an area of the code that’s messy, it’s tempting to add in a few lines and leave. I recommend going one step further and leaving the code nicer than it was found.
 
