@@ -8,15 +8,15 @@ At Wiredrive, we do a fair amount of code reviews. I had never done one before I
 
 Briefly, a code review is a discussion between two or more developers about changes to the code to address an issue. Many articles talk about the benefits of code reviews, including knowledge sharing, code quality, and developer growth. I’ve found fewer that talk about what to look for in a review and how to discuss code under review.
 
-# What I look for during a review
+# コードレビューの観点
 
-## アーキテクチャ / 設計 
+## アーキテクチャ / 設計編 
 
 * 単一責任の原則: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。クラスやメソッドの説明を記載するにあたって、"and" を使わなければ説明できないときようなときは、その設計はもしかしたら適切な抽象度になっていないかもしれないと疑う。
 割と単純な原則かと思うかもしれないが、確実に守っていくのは言うほど簡単ではない。
 
 * 開放/閉鎖の原則: オブジェクト指向言語を用いているのであれば、設計が拡張に対して開いており、変更に対して閉じているかを問う。
-What happens if we need to add another one of x?
+実際に機能が追加・変更されるときのことを想像して考えてみる。
 
 * 重複コード: 個人的に"スリーストライクアウト"ルールと呼んでいる。
 コードが一回コピーされるならまあ甘んじて許そう。だが二回目のコピーが行われたのなら、そのときは要リファクタリングである。
