@@ -10,32 +10,36 @@
 <body>
 <h1>Code Review Best Practices 日本語翻訳</h1>
 
-<p>以下の記事を日本語に翻訳していく。<br>
-メールにて著者より日本語訳・公開の許可をいただいている。<br>
+<p>本ポストは以下の記事の日本語訳である。<br>
 <a href="http://kevinlondon.com/2015/05/05/code-review-best-practices.html">Code Review Best Practices - Kevin London&#39;s blog</a></p>
+
+<!-- なお、元記事の著者より日本語訳・公開の許可をいただいている。 '-->
+
+<hr>
 
 <p>At Wiredrive, we do a fair amount of code reviews. I had never done one before I started here so it was a new experience for me. I think it’s a good idea to crystalize some of the things I look for when I’m doing code reviews and talk about the best way I’ve found to approach them.</p>
 
 <p>Briefly, a code review is a discussion between two or more developers about changes to the code to address an issue. Many articles talk about the benefits of code reviews, including knowledge sharing, code quality, and developer growth. I’ve found fewer that talk about what to look for in a review and how to discuss code under review.</p>
 
-<h1>コードレビューの観点</h1>
+<h1>オレ的コードレビューの観点</h1>
 
 <h2>アーキテクチャ / 設計編</h2>
 
 <ul>
-<li><p>単一責任の原則: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。<br>
+<li><p><a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">単一責任の原則</a>: 1つのクラスは1つの責務を持つという発想。メソッドにも同じ原則が適用できる。<br>
 たとえば、クラスやメソッドの説明を記載するにあたって、&quot;and&quot; を使わなければ説明できないときようなときは、その設計はもしかしたら適切な抽象度になっていないかもしれない。<br>
 割と単純な原則かと思うかもしれないが、確実に守っていくのはなかなか難しい。</p></li>
-<li><p>開放/閉鎖の原則: オブジェクト指向言語を用いているのであれば、設計が拡張に対して開いており、変更に対して閉じているかを考える。<br>
-実際に機能が追加・変更されるときのことを想像して考えてみる。</p></li>
-<li><p>重複コード: 個人的に&quot;スリーストライクアウト&quot;ルールと呼んでいる。<br>
-コードが一回コピーされるならまあ甘んじて許そう。だが二回目のコピーが行われたのなら、そのときは要リファクタリングである。<br>
-上記の例では合わせて三つの重複コードがあるのでスリーストライクでアウトである。重複部分は別途メソッドに切り出すなりしてコードの重複を防ごう。</p></li>
-<li><p>薄目で見てみる: ぼんやりとコードの「形」を見てみる。他のコードと似通ってはいないだろうか？<br>
+<li><p><a href="http://ja.wikipedia.org/wiki/%E9%96%8B%E6%94%BE/%E9%96%89%E9%8E%96%E5%8E%9F%E5%89%87">開放/閉鎖の原則</a>: オブジェクト指向言語を用いているのであれば、設計が拡張に対して開いており、変更に対して閉じているかを考える。<br>
+実際に機能が追加・変更されるときのことを想像して考えてみる。<br>
+（訳者補足）開放閉鎖原則についてのわかりやすそうな参考 <a href="http://qiita.com/magicant/items/be6129aa601e87e089d3">開放閉鎖原則とexpression problem - Qiita</a></p></li>
+<li><p>重複コード: <a href="http://c2.com/cgi/wiki?ThreeStrikesAndYouRefactor">&quot;スリーストライクアウト&quot;</a>ルールと呼ばれる規則を適用している。<br>
+コードが一回コピーされるならしぶしぶだが甘んじて許す。だが二回目のコピーが行われたのなら、そのときは要リファクタリングである。<br>
+二回コピーが行われたということは合わせて三つの重複コードがあるので、スリーストライクでアウトである。重複部分は別途メソッドに切り出すなりしてコードの重複を防ごう。</p></li>
+<li><p><a href="http://robertheaton.com/2014/06/20/code-review-without-your-eyes/">薄目で見てみる</a>: ぼんやりとコードの「形」を見てみる。他のコードと似通ってはいないだろうか？<br>
 他のコードと似たような「形」がたびたび登場するならば、無駄のある設計をしている可能性があるかもしれない。</p></li>
 <li><p>来たときよりキレイに: 変更対象のコードを目の当たりにして「うわぁなんだこれ」だったとき、その辺りに触れたくない気持ちもわからないではないが、<br>
 良くないコードはほっといたら一生良くないコードのなままなので、ほんのちょっとずつでもマトモなコードになるようにキレイにしていくのがオススメ。<br>
-（ボーイスカウトルールとも呼ばれたりする。）</p></li>
+（訳者補足）<a href="http://%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%81%8C%E7%9F%A5%E3%82%8B%E3%81%B9%E3%81%8D97%E3%81%AE%E3%81%93%E3%81%A8.com/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%B9%E3%82%AB%E3%82%A6%E3%83%88%E3%83%BB%E3%83%AB%E3%83%BC%E3%83%AB">ボーイスカウトルール - プログラマが知るべき97のこと</a></p></li>
 <li><p>潜在的なバグの有無: 境界値周りはちゃんと処理できているか？ループが期待通り終わるようになっていて無限ループしたりしないか？ 終わるときちゃんとキレイに終わるか？</p></li>
 <li><p>エラー処理の妥当性: エラー処理はエレガントに、かつ過不足なくやれているか？<br>
 カスタマイズしたエラークラスを用いているならば、それらは本当に役に立ってるか？</p></li>
