@@ -1,8 +1,10 @@
 # Code Review Best Practices 日本語翻訳
 
-以下の記事を日本語に翻訳していく。
-メールにて著者より日本語訳・公開の許可をいただいている。
+本ポストは以下の記事の日本語訳である。
 [Code Review Best Practices - Kevin London's blog](http://kevinlondon.com/2015/05/05/code-review-best-practices.html)
+なお、元記事の著者より日本語訳・公開の許可をいただいている。
+
+---------
 
 At Wiredrive, we do a fair amount of code reviews. I had never done one before I started here so it was a new experience for me. I think it’s a good idea to crystalize some of the things I look for when I’m doing code reviews and talk about the best way I’ve found to approach them.
 
