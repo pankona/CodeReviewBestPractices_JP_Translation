@@ -42,21 +42,26 @@ Briefly, a code review is a discussion between two or more developers about chan
 
 ## Style
 
-* メソッド名: Naming things is one of the hard problems in computer science. If a method is named get_message_queue_name and it is actually doing something completely different like sanitizing HTML from the input, then that’s an inaccurate method name. And probably a misleading function.
+* メソッド名: 正しく命名するというのは、コンピューターサイエンスにおいてとても難しい問題のひとつ。
+例えば、メソッド名に「get_message_queue_name」と付いているのに、その実、まったく異なる動作をするようなメソッドがあるとすれば、
+それは正しくないメソッド命名をしていることになるし、おそらくその関数名にダマされて誤った理解をするひとが多発する。
 
-* 変数名: foo or bar are probably not useful names for data structures. e is similarly not useful when compared to exception. Be as verbose as you need (depending on the language). Expressive variable names make it easier to understand code when we have to revisit it later.
+* 変数名: 変数名にfooとかbarとか付けたり、例外オブジェクトにeって名前を付けたりしてしまうと、変数名に意味がなくなってしまう。
+言語にもよるが、必要なだけ説明的な命名をするべき。表現的な変数名は、そのコードをあとで見返すことになったときに理解しやすくなる。
 
-* 関数の大きさ: 一関数につき、だいたい20行くらいを目安にしている。50行を超すような場合は、処理を別の関数に切り出していくのが有効。
+* 関数の大きさ: 一関数につき、だいたい20行くらいを目安にしている。もし50行を超してしまうような場合は、処理を別の関数に切り出していくのが有効。
 
-* クラスの大きさ: I think classes should be under about 300 lines total and ideally less than 100. It’s likely that large classes can be split into separate objects, which makes it easier to understand what the class is supposed to do.
+* クラスの大きさ: クラスの大きさは100行以下が理想で、長くても300行以下にすべきだと思っている。
+大きくなってしまったクラスはいくつかのオブジェクトに分割することができる場合が多く、分割して短くしてやることでそのクラスの目的がわかりやすくなる。
 
-* ファイルの大きさ: For Python files, I think around 1000 lines of code is about the most we should have in one file. Anything above that is a good sign that it should be split into smaller, more focused files. As the size of a file goes up, discoverability goes down.
+* ファイルの大きさ: ファイルサイズが大きくなるにつれて、見通しが悪くなっていく。
+Pythonのファイルならば、多くてもだいたい1000行くらいに収めるべきだと思う。それより大きくなるような場合は、別ファイルに分けて、一ファイルにさせる仕事を少なくしていくことを考える。
 
-* ドキュメンテーション: For complex methods or those with longer lists of arguments, is there a docstring explaining what each of the arguments does, if it’s not obvious?
+* ドキュメンテーション: メソッドの処理が複雑だったり引数が多かったりで関数の振る舞いが曖昧なとき、それを説明するドキュメントが存在するか？
 
-* コメントアウトされたコード: Good idea to remove any commented out lines.
+* コメントアウトされたコード: コメントアウトされたコードは消してしまえ。
 
-* 関数の引数の数: For the methods and functions, do they have 3 or fewer arguments? Greater than 3 is probably a sign that it could be grouped in a different way.
+* 関数の引数の数: 関数の引数の数は3つ以下になっているか？3つより多い場合は、なんらかの方法でまとめて引数を減らせるかもしれない。
 
 * 可読性: Is the code easy to understand? Do I have to pause frequently during the review to decipher it?
 
