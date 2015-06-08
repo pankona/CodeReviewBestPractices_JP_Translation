@@ -42,23 +42,23 @@ Briefly, a code review is a discussion between two or more developers about chan
 
 ## Style
 
-* Method names: Naming things is one of the hard problems in computer science. If a method is named get_message_queue_name and it is actually doing something completely different like sanitizing HTML from the input, then that’s an inaccurate method name. And probably a misleading function.
+* メソッド名: Naming things is one of the hard problems in computer science. If a method is named get_message_queue_name and it is actually doing something completely different like sanitizing HTML from the input, then that’s an inaccurate method name. And probably a misleading function.
 
-* Variable names: foo or bar are probably not useful names for data structures. e is similarly not useful when compared to exception. Be as verbose as you need (depending on the language). Expressive variable names make it easier to understand code when we have to revisit it later.
+* 変数名: foo or bar are probably not useful names for data structures. e is similarly not useful when compared to exception. Be as verbose as you need (depending on the language). Expressive variable names make it easier to understand code when we have to revisit it later.
 
-* Function length: My rule of thumb is that a function should be less than 20 or so lines. If I see a method above 50, I feel it’s best that it be cut into smaller pieces.
+* 関数の大きさ: 一関数につき、だいたい20行くらいを目安にしている。50行を超すような場合は、処理を別の関数に切り出していくのが有効。
 
-* Class length: I think classes should be under about 300 lines total and ideally less than 100. It’s likely that large classes can be split into separate objects, which makes it easier to understand what the class is supposed to do.
+* クラスの大きさ: I think classes should be under about 300 lines total and ideally less than 100. It’s likely that large classes can be split into separate objects, which makes it easier to understand what the class is supposed to do.
 
-* File length: For Python files, I think around 1000 lines of code is about the most we should have in one file. Anything above that is a good sign that it should be split into smaller, more focused files. As the size of a file goes up, discoverability goes down.
+* ファイルの大きさ: For Python files, I think around 1000 lines of code is about the most we should have in one file. Anything above that is a good sign that it should be split into smaller, more focused files. As the size of a file goes up, discoverability goes down.
 
-* Docstrings: For complex methods or those with longer lists of arguments, is there a docstring explaining what each of the arguments does, if it’s not obvious?
+* ドキュメンテーション: For complex methods or those with longer lists of arguments, is there a docstring explaining what each of the arguments does, if it’s not obvious?
 
-* Commented code: Good idea to remove any commented out lines.
+* コメントアウトされたコード: Good idea to remove any commented out lines.
 
-* Number of method arguments: For the methods and functions, do they have 3 or fewer arguments? Greater than 3 is probably a sign that it could be grouped in a different way.
+* 関数の引数の数: For the methods and functions, do they have 3 or fewer arguments? Greater than 3 is probably a sign that it could be grouped in a different way.
 
-* Readability: Is the code easy to understand? Do I have to pause frequently during the review to decipher it?
+* 可読性: Is the code easy to understand? Do I have to pause frequently during the review to decipher it?
 
 ## Testing
 
