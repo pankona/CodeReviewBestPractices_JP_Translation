@@ -50,9 +50,9 @@
 
 <ul>
 <li><p>メソッド名: 正しく命名するというのは、コンピューターサイエンスにおいてとても難しい問題のひとつ。<br>
-例えば、メソッド名に「get_message_queue_name」と付いているのに、その実、まったく異なる動作をするようなメソッドがあるとすれば、<br>
+例えば、メソッド名に <code>get_message_queue_name</code> と付いているのに、その実、まったく異なる動作をするようなメソッドがあるとすれば、<br>
 それは正しくないメソッド命名をしていることになるし、おそらくその関数名にダマされて誤った理解をするひとが多発する。</p></li>
-<li><p>変数名: 変数名にfooとかbarとか付けたり、例外オブジェクトにeって名前を付けたりしてしまうと、変数名に意味がなくなってしまう。<br>
+<li><p>変数名: 変数名に <code>foo</code> とか <code>bar</code> とか付けたり、例外オブジェクトに <code>e</code> って名前を付けたりしてしまうと、変数名に意味がなくなってしまう。<br>
 言語にもよるが、必要なだけ説明的な命名をするべき。表現的な変数名は、そのコードをあとで見返すことになったときに理解しやすくなる。</p></li>
 <li><p>関数の大きさ: 一関数につき、だいたい20行くらいを目安にしている。もし50行を超してしまうような場合は、処理を別の関数に切り出していくのが有効。</p></li>
 <li><p>クラスの大きさ: クラスの大きさは100行以下が理想で、長くても300行以下にすべきだと思っている。<br>
@@ -65,13 +65,18 @@ Pythonのファイルならば、多くてもだいたい1000行くらいに収�
 <li><p>可読性: コードはわかりやすいか？解読のために頻繁に立ち止まる必要があるか？</p></li>
 </ul>
 
-<h2>Testing</h2>
+<h2>テスト編</h2>
 
 <ul>
-<li><p>Test coverage: I like to see tests for new features. Are the tests thoughtful? Do they cover the failure conditions? Are they easy to read? How fragile are they? How big are the tests? Are they slow?</p></li>
-<li><p>Testing at the right level: When I review tests I’m also making sure that we’re testing them at the right level. In other words, are we as low a level as we need to be to check the expected functionality? Gary Bernhardt recommends a ratio of 95% unit tests, 5% integration tests. I find that particularly with Django projects, it’s easy to test at a high level by accident and create a slow test suite so it’s important to be vigilant.</p></li>
-<li><p>Number of Mocks: Mocking is great. Mocking everything is not great. I use a rule of thumb where if there’s more than 3 mocks in a test, it should be revisited. Either the test is testing too broadly or the function is too large. Maybe it doesn’t need to be tested at a unit test level and would suffice as an integration test. Either way, it’s something to discuss.</p></li>
-<li><p>Meets requirements: Usually as part of the end of a review, I’ll take a look at the requirements of the story, task, or bug which the work was filed against. If it doesn’t meet one of the criteria, it’s better to bounce it back before it goes to QA.</p></li>
+<li><p>カバレッジ: 新機能に対するテストを確認する。<br>
+よく設計されているか？異常系をカバーできているか？読みやすいか？変更に強くできているか？どのぐらい大きいか？動作速度はどうか？</p></li>
+<li><p>ちょうど良いバランスになっているか: テストをレビューするとき、バランスを見る。言い換えると、期待動作をチェックするのに必要十分なだけテストしているか。<br>
+Gary Bernhardtさんは、95％のユニットテストと5％の結合テストを推奨している。<br>
+Djangoのプロジェクトでは、図らずも高レベルで遅いテストを作るのが簡単であるので、注意してテストを設計している。</p></li>
+<li><p>モックの数: モックを使うのは良いが、モックが多いのは良くない。4つ以上のモックが一度に登場するならば、テスト方法について再考の余地がありそうだと考える。<br>
+そういうときは、テストが広範囲すぎるか、もしくは機能が大きすぎるかのどちらかになっていると思われる。<br>
+ユニットテストレベルでテストするのではなくて、結合テストレベルでやったほうが効率がいいかもしれない。いずれにせよ、議論するべき点である。</p></li>
+<li><p>要求を満たしているか: レビューの終わりに、その変更がそもそもの要求を満たせているか確認する。そうでなければ、QAにまわす前に作業しなおしてもらうべきだよね。</p></li>
 </ul>
 
 <h2>Review your own code first</h2>
