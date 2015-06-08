@@ -40,7 +40,7 @@ Briefly, a code review is a discussion between two or more developers about chan
 
 * 効率的な設計か: アルゴリズム、データ構造は効果的な実装を選択しているか？たとえば、配列を使うべきかハッシュテーブルを使うべきか、等。
 
-## Style
+## スタイル編
 
 * メソッド名: 正しく命名するというのは、コンピューターサイエンスにおいてとても難しい問題のひとつ。
 例えば、メソッド名に「get_message_queue_name」と付いているのに、その実、まったく異なる動作をするようなメソッドがあるとすれば、
@@ -63,7 +63,7 @@ Pythonのファイルならば、多くてもだいたい1000行くらいに収�
 
 * 関数の引数の数: 関数の引数の数は3つ以下になっているか？3つより多い場合は、なんらかの方法でまとめて引数を減らせるかもしれない。
 
-* 可読性: Is the code easy to understand? Do I have to pause frequently during the review to decipher it?
+* 可読性: コードはわかりやすいか？解読のために頻繁に立ち止まる必要があるか？
 
 ## Testing
 
