@@ -96,11 +96,11 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 
 I find that the human parts of the code review offer as many challenges as reviewing the code. I’m still learning how to handle this part too. Here are some approaches that have worked for me when discussing code:
 
-* Ask questions: How does this method work? If this requirement changes, what else would have to change? How could we make this more maintainable?
+* 質問してみる: How does this method work? If this requirement changes, what else would have to change? How could we make this more maintainable?
 
-* Compliment / reinforce good practices: One of the most important parts of the code review is to reward developers for growth and effort. Few things feel better than getting praise from a peer. I try to offer as many positive comments as possible.
+* 褒める / 良いやり方を支持する: One of the most important parts of the code review is to reward developers for growth and effort. Few things feel better than getting praise from a peer. I try to offer as many positive comments as possible.
 
-* Discuss in person for more detailed points: On occasion, a recommended architectural change might be large enough that it’s easier to discuss it in person rather than in the comments. Similarly, if I’m discussing a point and it goes back and forth, I’ll often pick it up in person and finish out the discussion.
+* 詳細について個人的に話し込む: On occasion, a recommended architectural change might be large enough that it’s easier to discuss it in person rather than in the comments. Similarly, if I’m discussing a point and it goes back and forth, I’ll often pick it up in person and finish out the discussion.
 
 * Explain reasoning: I find it’s best both to ask if there’s a better alternative and justify why I think it’s worth fixing. Sometimes it can feel like the changes suggested can seem nit-picky without context or explanation.
 
