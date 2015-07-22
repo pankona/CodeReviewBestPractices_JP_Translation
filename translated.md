@@ -92,7 +92,7 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 レビューに出す前に、まずセルフコードレビューがパスできるか確かめるるようにしたい。
 他の人に指摘されるより自分に指摘されるほうが気持ちも楽だしね。:p
 
-## How to handle code reviews
+## レビューの進め方
 
 I find that the human parts of the code review offer as many challenges as reviewing the code. I’m still learning how to handle this part too. Here are some approaches that have worked for me when discussing code:
 
@@ -102,21 +102,26 @@ I find that the human parts of the code review offer as many challenges as revie
 
 * 詳細について個人的に話し込む: On occasion, a recommended architectural change might be large enough that it’s easier to discuss it in person rather than in the comments. Similarly, if I’m discussing a point and it goes back and forth, I’ll often pick it up in person and finish out the discussion.
 
-* Explain reasoning: I find it’s best both to ask if there’s a better alternative and justify why I think it’s worth fixing. Sometimes it can feel like the changes suggested can seem nit-picky without context or explanation.
+* 理屈を説明する: I find it’s best both to ask if there’s a better alternative and justify why I think it’s worth fixing. Sometimes it can feel like the changes suggested can seem nit-picky without context or explanation.
 
-* Make it about the code: It’s easy to take notes from code reviews personally, especially if we take pride in our work. It’s best, I find, to make discussions about the code than about the developer. It lowers resistance and it’s not about the developer anyway, it’s about improving the quality of the code.
+* コードについての話をする: It’s easy to take notes from code reviews personally, especially if we take pride in our work. It’s best, I find, to make discussions about the code than about the developer. It lowers resistance and it’s not about the developer anyway, it’s about improving the quality of the code.
 
-* Suggest importance of fixes: I tend to offer many suggestions, not all of which need to be acted upon. Clarifying if an item is important to fix before it can be considered done is useful both for the reviewer and the reviewee. It makes the results of a review clear and actionable.
+* Suggest importance of fixes: I tend to offer many suggestions, not all of which need to be acted upon. レビュアーとレビュイーがもうええやろと思ってレビューを終わりにする前に、重要な修正であるかどうかをハッキリさせるため。レビュー結果がより明確になるし、より実用的になる。
 
-## On mindset
+## マインドセット
 
-As developers, we are responsible for making both working and maintainable code. It can be easy to defer the second part because of pressure to deliver working code. Refactoring does not change functionality by design, so don’t let suggested changes discourage you. Improving the maintainability of the code can be just as important as fixing the line of code that caused the bug.
+開発者は、動作するのはもちろんのこと、加えてメンテナンスしやすいコードを書く責任がある。  
+ただ、納期におされてメンテナンス性がおざなりになることがしばしばある。  
 
-In addition, please keep an open mind during code reviews. This is something I think everyone struggles with. I can get defensive in code reviews too, because it can feel personal when someone says code you wrote could be better.
+リファクタリングは外部的な振る舞いを変更しないが、それについてテンションさがったり残念に思ったりする必要はない。
+リファクタリングによるメンテナンス性の向上は、バグ修正と同じくらい重要であるのだから。
 
-If the reviewer makes a suggestion, and I don’t have a clear answer as to why the suggestion should not be implemented, I’ll usually make the change. If the reviewer is asking a question about a line of code, it may mean that it would confuse others in the future. In addition, making the changes can help reveal larger architectural issues or bugs.
+加えて、コードレビュー中はなるべくオープンな気持ちを持つべきである。 
+レビュー指摘は個人攻撃のように思えてしまい、コードレビューに対して臆病になる気持ちも分からないではないが。
 
-(Thanks to Zach Schipono for recommending this section be added)
+レビュアーの指摘に対して、なぜそうしなかったのか説明できないとき、指摘通りに修正したとする。
+他のレビュアーがその変更について質問をしたとき、説明できないことになると、将来混乱をまねくかもしれない。
+また、変更が大きな設計上の欠陥やバグを発見するのに役立つ可能性もある。　
 
 ## Addressing suggested changes
 
