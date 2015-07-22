@@ -80,15 +80,17 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 
 * 要求を満たしているか: レビューの終わりに、その変更がそもそもの要求を満たせているか確認する。そうでなければ、QAにまわす前に作業しなおしてもらうべきだよね。
 
-## Review your own code first
+## まず自分のコードを最初にレビューしよう
 
-Before submitting my code, I will often do a git add for the affected files / directories and then run a git diff --staged to examine the changes I have not yet committed. Usually I’m looking for things like:
+変更したファイルやディレクトリに対して `git add` した後、 `git diff --staged` で変更内容をコミットする前にチェックするようにしている。  
+そのときに注意しているのは、
 
-* Did I leave a comment or TODO in?
-* Does that variable name make sense?
-* ... and anything else that I’ve brought up above.
+* 不用なコメントアウト、"TODO" をそのままにしてないか？
+* 変数名はわかりやすいか？
+* ... 他には上に書いているあれこれ
 
-I want to make sure that I would pass my own code review first before I subject other people to it. It also stings less to get notes from yourself than from others :p
+レビューに出す前に、まずセルフコードレビューがパスできるか確かめるるようにしたい。
+他の人に指摘されるより自分に指摘されるほうが気持ちも楽だしね。:p
 
 ## How to handle code reviews
 
