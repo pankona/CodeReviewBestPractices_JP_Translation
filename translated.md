@@ -94,7 +94,8 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 
 ## レビューの進め方
 
-I find that the human parts of the code review offer as many challenges as reviewing the code. I’m still learning how to handle this part too. Here are some approaches that have worked for me when discussing code:
+コードレビューと同様に、ひとによるコードレビューについても多くの課題・改善の余地があることに気づいた。
+より良い方法をいまだに模索中であるが、以下に実際にうまくいったやり方をいくつか紹介する。
 
 * 質問してみる： どのようにこのメソッドは動作するのか？もし要求が変わったら、どこにどんな変更が必要か？  
 よりメンテナンス性を高めるにはどうするのがいいか？
@@ -104,7 +105,6 @@ I find that the human parts of the code review offer as many challenges as revie
 
 * 詳細について個人的に話し込む： 設計変更などで変更が大きくなる場合は、コメントでやりとりするよりも直接話をするほうが効果的。  
 指摘に対する議論が行ったり来たりしてなかなか収束しないような場合も、直接話をして終わらせることがよくある。
-
 
 * 理屈を説明する： より良いやり方があるならば、なぜ修正するべきか、なぜそうするべきかを説明するのが、双方にとって良い。  
 しばしば、背景の解説も説明もなしの指摘は、うっとうしく見えてしまったりするものである。
@@ -131,20 +131,23 @@ I find that the human parts of the code review offer as many challenges as revie
 他のレビュアーがその変更について質問をしたとき、説明できないことになると、将来混乱をまねくかもしれない。
 また、変更が大きな設計上の欠陥やバグを発見するのに役立つ可能性もある。
 
-## Addressing suggested changes
+## コードレビュー指摘への対応
 
-We typically leave comments on a per-line basis with some thinking behind them. Usually I will look at the review notes in Stash and, at the same time, have the code pulled up to make the suggested changes. I find that I forget what items I am supposed to address if I do not handle them right away.
+通常は、それぞれの指摘に対してコメントする。
+レビュー指摘を見つけると同時に、修正したコードをコミットするようにしている。
+そうしないと、どの件に対応してようとしていたか、忘れてしまうことがあるので。
 
-## Additional References
+## 参考文献
 
-There’s a number of books on the art of creating clean code. I’ve read through fewer of these than I might like (and I’m working to change that). Here’s a few books on my list:
+キレイなコードを書く技術に関する書籍はたくさん存在する。
+いくつか紹介する。
 
 * Clean Code
 * Refactoring
 
-Some useful, related talks I’m a big fan of talks so here’s a few that I thought of while writing this:
+良さ気な動画もある。
 
-* All the Small Things by Sandi Metz: Covers the topic well, particularly from a perspective of writing clean, reusable code.
-* How to Design a Good API and Why it Matters: API, in this sense, meaning the way in which the application is constructed and how we interact with it. Many of the points in the video talk about similar themes to those discussed here.
+* [All the Small Things by Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE&index=1&list=LLlt4ZSW8NUcXLWiB3NMnK_w): Covers the topic well, particularly from a perspective of writing clean, reusable code.
+* [How to Design a Good API and Why it Matters](https://www.youtube.com/watch?v=aAb7hSCtvGw&list=LLlt4ZSW8NUcXLWiB3NMnK_w&index=48): API, in this sense, meaning the way in which the application is constructed and how we interact with it. Many of the points in the video talk about similar themes to those discussed here.
 
 
