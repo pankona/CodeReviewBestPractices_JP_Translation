@@ -96,17 +96,25 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 
 I find that the human parts of the code review offer as many challenges as reviewing the code. I’m still learning how to handle this part too. Here are some approaches that have worked for me when discussing code:
 
-* 質問してみる: How does this method work? If this requirement changes, what else would have to change? How could we make this more maintainable?
+* 質問してみる： どのようにこのメソッドは動作するのか？もし要求が変わったら、どこにどんな変更が必要か？  
+よりメンテナンス性を高めるにはどうするのがいいか？
 
-* 褒める / 良いやり方を支持する: One of the most important parts of the code review is to reward developers for growth and effort. Few things feel better than getting praise from a peer. I try to offer as many positive comments as possible.
+* 褒める / 良いやり方を支持する： コードレビューにおける最も重要な要素のひとつは、成長・努力に対する報酬を与えることである。  
+同僚から賞賛されるのはかなり嬉しいぞ。私はできるだけ多くのポジティブなコメントをするように心がけている。
 
-* 詳細について個人的に話し込む: On occasion, a recommended architectural change might be large enough that it’s easier to discuss it in person rather than in the comments. Similarly, if I’m discussing a point and it goes back and forth, I’ll often pick it up in person and finish out the discussion.
+* 詳細について個人的に話し込む： 設計変更などで変更が大きくなる場合は、コメントでやりとりするよりも直接話をするほうが効果的。  
+指摘に対する議論が行ったり来たりしてなかなか収束しないような場合も、直接話をして終わらせることがよくある。
 
-* 理屈を説明する: I find it’s best both to ask if there’s a better alternative and justify why I think it’s worth fixing. Sometimes it can feel like the changes suggested can seem nit-picky without context or explanation.
 
-* コードについての話をする: It’s easy to take notes from code reviews personally, especially if we take pride in our work. It’s best, I find, to make discussions about the code than about the developer. It lowers resistance and it’s not about the developer anyway, it’s about improving the quality of the code.
+* 理屈を説明する： より良いやり方があるならば、なぜ修正するべきか、なぜそうするべきかを説明するのが、双方にとって良い。  
+しばしば、背景の解説も説明もなしの指摘は、うっとうしく見えてしまったりするものである。
 
-* Suggest importance of fixes: I tend to offer many suggestions, not all of which need to be acted upon. レビュアーとレビュイーがもうええやろと思ってレビューを終わりにする前に、重要な修正であるかどうかをハッキリさせるため。レビュー結果がより明確になるし、より実用的になる。
+* コードについての話をする： レビュー指摘するのは簡単である。特に誇りをもって業務にあたっている場合は。  
+コードについて議論をしているのであって、コードを書いた人の話で盛り上がってはならない。  
+議論はあくまでコードの質をあげるために行っているのであると思えば、指摘も素直に受け入れる気持ちになれるのでは。
+
+* レビュー指摘の重要度を示す： 私はたくさんの提案を提供しがちであるが、それらの指摘がすべてがコードに反映される必要はない。  
+指摘が重要かどうかを明らかにすることは、レビュアー、レビュイーのどちらにも有用な情報である。レビュー結果が明確になり、その後の修正作業もしやすくなる効果もある。
 
 ## マインドセット
 
@@ -121,7 +129,7 @@ I find that the human parts of the code review offer as many challenges as revie
 
 レビュアーの指摘に対して、なぜそうしなかったのか説明できないとき、指摘通りに修正したとする。
 他のレビュアーがその変更について質問をしたとき、説明できないことになると、将来混乱をまねくかもしれない。
-また、変更が大きな設計上の欠陥やバグを発見するのに役立つ可能性もある。　
+また、変更が大きな設計上の欠陥やバグを発見するのに役立つ可能性もある。
 
 ## Addressing suggested changes
 
