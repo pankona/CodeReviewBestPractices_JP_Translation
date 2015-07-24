@@ -6,9 +6,13 @@
 
 ---------
 
-At Wiredrive, we do a fair amount of code reviews. I had never done one before I started here so it was a new experience for me. I think it’s a good idea to crystalize some of the things I look for when I’m doing code reviews and talk about the best way I’ve found to approach them.
+Wiredrive社において, 私達はたくさんのをコードレビューしてきた。私にとっていままでそういう経験がなかったものだから、なかなか新鮮な思いである。
+私がコードレビューを通して気づいたこと、良いと思っているやり方についてここで整理してみようと思う。
 
-Briefly, a code review is a discussion between two or more developers about changes to the code to address an issue. Many articles talk about the benefits of code reviews, including knowledge sharing, code quality, and developer growth. I’ve found fewer that talk about what to look for in a review and how to discuss code under review.
+端的に言えば、コードレビューとは2人以上の開発者がある問題解決のために修正に対して議論することである。
+たくさんの記事がコードレビューのメリット (知識の共有、コードの品質の向上、開発者のスキル向上、等) に言及している。
+しかし、レビューの具体的なやり方について触れている記事はあまり存在しないと思われる。
+本記事では、コードレビューにおいて何に着目するか、どのように議論するべきか、について書いていく。
 
 # オレ的コードレビューの観点
 
