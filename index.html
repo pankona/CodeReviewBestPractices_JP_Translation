@@ -79,59 +79,77 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 <li><p>要求を満たしているか: レビューの終わりに、その変更がそもそもの要求を満たせているか確認する。そうでなければ、QAにまわす前に作業しなおしてもらうべきだよね。</p></li>
 </ul>
 
-<h2>Review your own code first</h2>
+<h2>まず自分のコードを最初にレビューしよう</h2>
 
-<p>Before submitting my code, I will often do a git add for the affected files / directories and then run a git diff --staged to examine the changes I have not yet committed. Usually I’m looking for things like:</p>
-
-<ul>
-<li>Did I leave a comment or TODO in?</li>
-<li>Does that variable name make sense?</li>
-<li>... and anything else that I’ve brought up above.</li>
-</ul>
-
-<p>I want to make sure that I would pass my own code review first before I subject other people to it. It also stings less to get notes from yourself than from others :p</p>
-
-<h2>How to handle code reviews</h2>
-
-<p>I find that the human parts of the code review offer as many challenges as reviewing the code. I’m still learning how to handle this part too. Here are some approaches that have worked for me when discussing code:</p>
+<p>変更したファイルやディレクトリに対して <code>git add</code> した後、 <code>git diff --staged</code> で変更内容をコミットする前にチェックするようにしている。<br><br>
+そのときに注意しているのは、</p>
 
 <ul>
-<li><p>Ask questions: How does this method work? If this requirement changes, what else would have to change? How could we make this more maintainable?</p></li>
-<li><p>Compliment / reinforce good practices: One of the most important parts of the code review is to reward developers for growth and effort. Few things feel better than getting praise from a peer. I try to offer as many positive comments as possible.</p></li>
-<li><p>Discuss in person for more detailed points: On occasion, a recommended architectural change might be large enough that it’s easier to discuss it in person rather than in the comments. Similarly, if I’m discussing a point and it goes back and forth, I’ll often pick it up in person and finish out the discussion.</p></li>
-<li><p>Explain reasoning: I find it’s best both to ask if there’s a better alternative and justify why I think it’s worth fixing. Sometimes it can feel like the changes suggested can seem nit-picky without context or explanation.</p></li>
-<li><p>Make it about the code: It’s easy to take notes from code reviews personally, especially if we take pride in our work. It’s best, I find, to make discussions about the code than about the developer. It lowers resistance and it’s not about the developer anyway, it’s about improving the quality of the code.</p></li>
-<li><p>Suggest importance of fixes: I tend to offer many suggestions, not all of which need to be acted upon. Clarifying if an item is important to fix before it can be considered done is useful both for the reviewer and the reviewee. It makes the results of a review clear and actionable.</p></li>
+<li>不用なコメントアウト、&quot;TODO&quot; をそのままにしてないか？</li>
+<li>変数名はわかりやすいか？</li>
+<li>... 他には上に書いているあれこれ</li>
 </ul>
 
-<h2>On mindset</h2>
+<p>レビューに出す前に、まずセルフコードレビューがパスできるか確かめるるようにしたい。<br>
+他の人に指摘されるより自分に指摘されるほうが気持ちも楽だしね。:p</p>
 
-<p>As developers, we are responsible for making both working and maintainable code. It can be easy to defer the second part because of pressure to deliver working code. Refactoring does not change functionality by design, so don’t let suggested changes discourage you. Improving the maintainability of the code can be just as important as fixing the line of code that caused the bug.</p>
+<h2>レビューの進め方</h2>
 
-<p>In addition, please keep an open mind during code reviews. This is something I think everyone struggles with. I can get defensive in code reviews too, because it can feel personal when someone says code you wrote could be better.</p>
+<p>コードレビューと同様に、ひとによるコードレビューについても多くの課題・改善の余地があることに気づいた。<br>
+より良い方法をいまだに模索中であるが、以下に実際にうまくいったやり方をいくつか紹介する。</p>
 
-<p>If the reviewer makes a suggestion, and I don’t have a clear answer as to why the suggestion should not be implemented, I’ll usually make the change. If the reviewer is asking a question about a line of code, it may mean that it would confuse others in the future. In addition, making the changes can help reveal larger architectural issues or bugs.</p>
+<ul>
+<li><p>質問してみる： どのようにこのメソッドは動作するのか？もし要求が変わったら、どこにどんな変更が必要か？<br><br>
+よりメンテナンス性を高めるにはどうするのがいいか？</p></li>
+<li><p>褒める / 良いやり方を支持する： コードレビューにおける最も重要な要素のひとつは、成長・努力に対する報酬を与えることである。<br><br>
+同僚から賞賛されるのはかなり嬉しいぞ。私はできるだけ多くのポジティブなコメントをするように心がけている。</p></li>
+<li><p>詳細について個人的に話し込む： 設計変更などで変更が大きくなる場合は、コメントでやりとりするよりも直接話をするほうが効果的。<br><br>
+指摘に対する議論が行ったり来たりしてなかなか収束しないような場合も、直接話をして終わらせることがよくある。</p></li>
+<li><p>理屈を説明する： より良いやり方があるならば、なぜ修正するべきか、なぜそうするべきかを説明するのが、双方にとって良い。<br><br>
+しばしば、背景の解説も説明もなしの指摘は、うっとうしく見えてしまったりするものである。</p></li>
+<li><p>コードについての話をする： レビュー指摘するのは簡単である。特に誇りをもって業務にあたっている場合は。<br><br>
+コードについて議論をしているのであって、コードを書いた人の話で盛り上がってはならない。<br><br>
+議論はあくまでコードの質をあげるために行っているのであると思えば、指摘も素直に受け入れる気持ちになれるのでは。</p></li>
+<li><p>レビュー指摘の重要度を示す： 私はたくさんの提案を提供しがちであるが、それらの指摘がすべてがコードに反映される必要はない。<br><br>
+指摘が重要かどうかを明らかにすることは、レビュアー、レビュイーのどちらにも有用な情報である。レビュー結果が明確になり、その後の修正作業もしやすくなる効果もある。</p></li>
+</ul>
 
-<p>(Thanks to Zach Schipono for recommending this section be added)</p>
+<h2>マインドセット</h2>
 
-<h2>Addressing suggested changes</h2>
+<p>開発者は、動作するのはもちろんのこと、加えてメンテナンスしやすいコードを書く責任がある。<br><br>
+ただ、納期におされてメンテナンス性がおざなりになることがしばしばある。  </p>
 
-<p>We typically leave comments on a per-line basis with some thinking behind them. Usually I will look at the review notes in Stash and, at the same time, have the code pulled up to make the suggested changes. I find that I forget what items I am supposed to address if I do not handle them right away.</p>
+<p>リファクタリングは外部的な振る舞いを変更しないが、それについてテンションさがったり残念に思ったりする必要はない。<br>
+リファクタリングによるメンテナンス性の向上は、バグ修正と同じくらい重要であるのだから。</p>
 
-<h2>Additional References</h2>
+<p>加えて、コードレビュー中はなるべくオープンな気持ちを持つべきである。 <br>
+レビュー指摘は個人攻撃のように思えてしまい、コードレビューに対して臆病になる気持ちも分からないではないが。</p>
 
-<p>There’s a number of books on the art of creating clean code. I’ve read through fewer of these than I might like (and I’m working to change that). Here’s a few books on my list:</p>
+<p>レビュアーの指摘に対して、なぜそうしなかったのか説明できないとき、指摘通りに修正したとする。<br>
+他のレビュアーがその変更について質問をしたとき、説明できないことになると、将来混乱をまねくかもしれない。<br>
+また、変更が大きな設計上の欠陥やバグを発見するのに役立つ可能性もある。</p>
+
+<h2>コードレビュー指摘への対応</h2>
+
+<p>通常は、それぞれの指摘に対してコメントする。<br>
+レビュー指摘を見つけると同時に、修正したコードをコミットするようにしている。<br>
+そうしないと、どの件に対応してようとしていたか、忘れてしまうことがあるので。</p>
+
+<h2>参考文献</h2>
+
+<p>キレイなコードを書く技術に関する書籍はたくさん存在する。<br>
+いくつか紹介する。</p>
 
 <ul>
 <li>Clean Code</li>
 <li>Refactoring</li>
 </ul>
 
-<p>Some useful, related talks I’m a big fan of talks so here’s a few that I thought of while writing this:</p>
+<p>良さ気な動画もある。</p>
 
 <ul>
-<li>All the Small Things by Sandi Metz: Covers the topic well, particularly from a perspective of writing clean, reusable code.</li>
-<li>How to Design a Good API and Why it Matters: API, in this sense, meaning the way in which the application is constructed and how we interact with it. Many of the points in the video talk about similar themes to those discussed here.</li>
+<li><a href="https://www.youtube.com/watch?v=8bZh5LMaSmE&amp;index=1&amp;list=LLlt4ZSW8NUcXLWiB3NMnK_w">All the Small Things by Sandi Metz</a>: Covers the topic well, particularly from a perspective of writing clean, reusable code.</li>
+<li><a href="https://www.youtube.com/watch?v=aAb7hSCtvGw&amp;list=LLlt4ZSW8NUcXLWiB3NMnK_w&amp;index=48">How to Design a Good API and Why it Matters</a>: API, in this sense, meaning the way in which the application is constructed and how we interact with it. Many of the points in the video talk about similar themes to those discussed here.</li>
 </ul>
 
 <hr />
