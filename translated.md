@@ -142,12 +142,12 @@ Djangoのプロジェクトでは、図らずも高レベルで遅いテスト�
 キレイなコードを書く技術に関する書籍はたくさん存在する。
 いくつか紹介する。
 
-* Clean Code
-* Refactoring
+* [Clean Code](http://www.amazon.co.jp/Clean-Code-アジャイルソフトウェア達人の技-Robert-Martin/dp/4048676881)
+* [Refactoring](http://www.amazon.co.jp/新装版-リファクタリング―既存のコードを安全に改善する―-OBJECT-TECHNOLOGY-SERIES/dp/427405019X)
 
 良さ気な動画もある。
 
-* [All the Small Things by Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE&index=1&list=LLlt4ZSW8NUcXLWiB3NMnK_w): Covers the topic well, particularly from a perspective of writing clean, reusable code.
-* [How to Design a Good API and Why it Matters](https://www.youtube.com/watch?v=aAb7hSCtvGw&list=LLlt4ZSW8NUcXLWiB3NMnK_w&index=48): API, in this sense, meaning the way in which the application is constructed and how we interact with it. Many of the points in the video talk about similar themes to those discussed here.
+* [All the Small Things by Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE&index=1&list=LLlt4ZSW8NUcXLWiB3NMnK_w): 本記事のトピックに加え、キレイなコード、再利用可能なコードについても触れている。
+* [How to Design a Good API and Why it Matters](https://www.youtube.com/watch?v=aAb7hSCtvGw&list=LLlt4ZSW8NUcXLWiB3NMnK_w&index=48): APIについて。どのようにアプリケーションを構築してどのようにやりとりするべきかについて。本記事のトピックと似たようなテーマの話題が何度かなされている。
 
 
