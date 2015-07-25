@@ -15,6 +15,7 @@ require "github/markdown"
 require "optparse"
 require "date"
 name = ENV['USER'] || ENV['LOGNAME'] || Etc.getlogin || Etc.getpwuid.name
+title = ARGV[0]
 language = "en"
 stylesheets = []
 javascripts = []
@@ -24,6 +25,7 @@ mode = :gfm
 opts.on("-s STYLESHEET_FILENAME","--style STYLESHEET_FILENAME",
         "Specify stylesheet filename."){|v| stylesheets << v}
 opts.on("-n YOUR_NAME","--name YOUR_NAME","Specify your name."){|v| name=v}
+opts.on("-t PAGE_TITLE","--title PAGE_TITLE","Specify page title."){|v| title=v}
 opts.on("-j JAVASCRIPT_FILENAME","--javascript JAVASCRIPT_FILENAME",
         "Specify JavaScript filename."){|v| javascripts << v}
 opts.on("-l LANGUAGE","--language LANGUAGE",String,
@@ -33,8 +35,6 @@ opts.on("-g", "--gfm",             "GFM mode."){mode = :gfm}
 opts.on("-p", "--plaintext", "Plaintext mode."){mode = :plaintext}
 opts.on_tail("-h", "--help", "Show this message."){puts opts.to_s.sub(/options/,'options] [filename'); exit}
 opts.parse!(ARGV)
-
-title = ARGV[0]
 
 body = GitHub::Markdown.to_html(ARGF.read,mode).gsub(/<pre lang="(.*)"><code>/,'<pre lang="\1"><code class="prettyprint">')
 
