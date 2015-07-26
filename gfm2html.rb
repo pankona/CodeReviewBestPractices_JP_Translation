@@ -55,6 +55,7 @@ STDOUT << "<!DOCTYPE html>
 <body>
 #{body}
 <hr />
+<a href=\"http://b.hatena.ne.jp/entry/http://pankona.github.io/CodeReviewBestPractices_JP_Translation/\" class=\"hatena-bookmark-button\" data-hatena-bookmark-title=\"Code Review Best Practices 日本語訳\" data-hatena-bookmark-layout=\"simple-balloon\" title=\"このエントリーをはてなブックマークに追加\"><img src=\"https://b.st-hatena.com/images/entry-button/button-only@2x.png\" alt=\"このエントリーをはてなブックマークに追加\" width=\"20\" height=\"20\" style=\"border: none;\" /></a><script type=\"text/javascript\" src=\"https://b.st-hatena.com/js/bookmark_button.js\" charset=\"utf-8\" async=\"async\"></script>
 <address>Copyright &#169; #{Date.today.year} #{name}</address>
 </body>
 </html>
