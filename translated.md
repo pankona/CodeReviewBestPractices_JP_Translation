@@ -1,8 +1,14 @@
 # Code Review Best Practices 日本語翻訳
 
-本ポストは以下の記事の日本語訳である。
+本ポストは以下の記事の日本語訳です。ご本人に、翻訳、掲載の許可をいただいています。
 [Code Review Best Practices - Kevin London's blog](http://kevinlondon.com/2015/05/05/code-review-best-practices.html)
-<!-- なお、元記事の著者より日本語訳・公開の許可をいただいている。 '-->
+
+本記事は、以下の GitHub リポジトリの gh-pages として存在しています。
+https://github.com/pankona/CodeReviewBestPractices_JP_Translation
+
+日本語訳がおかしいところや、こうしたほうが分かりやすい、等、
+指摘や提案があれば ISSUE か Pull Request か、その他なんでもいいので教えてくれるととても嬉しいです。
+以下、翻訳部分スタート。
 
 ---------
 
